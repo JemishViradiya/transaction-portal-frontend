@@ -1,0 +1,13 @@
+<div *ngIf="transaction">
+  <div>
+    <label>ID: </label>{{ transaction.id }}
+  </div>
+  <div>
+    <label>Date: </label>{{ transaction.date | date: 'dd/MM/yyyy' }}
+  </div>
+  <div>
+    <label>Comments: </label>
+    <input [(ngModel)]="transaction.Comments" placeholder="comments" required pattern="[a-zA-Z0-9 ]*" />
+  </div>
+  <button (click)="save()">Save</button>
+</div>
